@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Header from "../components/shared/Navbar";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ const Home = () => {
   };
   return (
     <>
+      <Header />
       <div>Home</div>
       <div>
         <button onClick={login}>Login</button>
