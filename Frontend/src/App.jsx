@@ -1,17 +1,16 @@
-import React from "react";
-import Header from "./components/shared/Navbar";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <div>
-        <Header />
-        <div>
-          <h1 class="text-3xl font-bold underline">Hello world!</h1>
-        </div>
-      </div>
-    </>
+    <Routes>
+
+      <Route path="/" element={<Home />} />
+
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
-};
+}
 
 export default App;
